@@ -1,0 +1,60 @@
+@import url("reset-modern.css");
+@import url("mondrian-table.css");
+@import url("mondrian-inline.css");
+
+.container {
+  width: 814px;
+  width: 814px;
+  margin: 0px auto;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.container {
+  width: 814px;
+}
+
+.header {
+  font-size: 2.2em;
+}
+
+.header,
+.category__promo > span {
+  color: lightseagreen;
+  font-weight: bold;
+}
+
+.header,
+.category,
+.item {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.category__name,
+.item__name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.category__subnames,
+.category__parent,
+.category__promo {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.category__promo {
+  font-family: Georgia, serif;
+  text-align: justify;
+  line-height: 1.2em;
+}
+
+.category__outline,
+.item__outline {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px dotted lightgray;
+  box-shadow: 4px 4px 8px 0px lightgray;
+}

@@ -1,0 +1,13 @@
+/* Homework 3 */
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+td {
+  width: 130px;
+  height: 130px;
+}
