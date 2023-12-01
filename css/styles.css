@@ -1,18 +1,12 @@
-@import url("reset-modern.css");
+@import url("reset.css");
 @import url("mondrian-table.css");
 @import url("mondrian-inline.css");
 
 .container {
-  width: 814px;
-  width: 814px;
   margin: 0px auto;
   font-family: Arial, sans-serif;
   font-size: 18px;
   text-align: center;
-}
-
-.container {
-  width: 814px;
 }
 
 .header {
@@ -28,18 +22,24 @@
 .header,
 .category,
 .item {
+  width: 814px;
+  margin: 0px auto;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
 .category__name,
-.item__name {
+.title {
   font-size: 2em;
   font-weight: bold;
 }
 
+.title {
+  margin-bottom: 20px;
+}
+
+.navigation,
 .category__subnames,
-.category__parent,
 .category__promo {
   margin-top: 10px;
   font-size: 1.2em;
@@ -51,9 +51,9 @@
   line-height: 1.2em;
 }
 
-.category__outline,
-.item__outline {
-  margin-top: 20px;
+.category__outline {
+  
+  margin: 20px auto;
   padding: 15px;
   border: 1px dotted lightgray;
   box-shadow: 4px 4px 8px 0px lightgray;
