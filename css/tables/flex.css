@@ -3,7 +3,7 @@
   border: 2px solid black;
 }
 
-/* Block elements that include only inline-blocks */
+/* Block elements that include only flex blocks */
 /* (the dimensions are determined by the content) */
 .tab__first,
 .tab__second,
@@ -12,15 +12,7 @@
   display: flex;
 }
 
-/* All inline-blocks */
-/* .tab__first > div,
-.tab__second > div,
-.tab__last > div,
-.tab__last > div:last-child > div:last-child > div {
-  float: left;
-} */
-
-/* Final inline-blocks with data */
+/* Final blocks with data */
 /* (width and height must be set)   */
 /* Nodes 1, 2, 3 */
 .tab__first > div,
@@ -35,7 +27,7 @@
   height: 120px;
 }
 
-/* Inline-blocks that include block elements */
+/* Blocks that include block elements */
 /* (width must be set, height is determined by the childs) */
 /* Nodes 4-5 */
 .tab__second > div:first-child {
