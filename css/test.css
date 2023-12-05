@@ -1,0 +1,26 @@
+@import url("/css/reset.css");
+
+.flex-container {
+  margin: 60px auto;
+  width: 600px;
+  border: 2px solid green;
+  padding: 4px;
+  /* height: 400px; */
+
+  display: flex;
+  flex-direction: row; /* content direction -> justify-content */
+  flex-wrap: wrap;
+
+  justify-content: center; /* flex-direction */
+  align-items: center;  /* orthogonal axis */
+  /* gap: 30px; */
+  /* overflow: hidden; */
+}
+
+.flex-container > div {
+  padding: 12px;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+
+
+}

@@ -1,0 +1,36 @@
+@import url("/css/reset.css");
+
+.container {
+  width: 720px;
+}
+
+.container, .item, .item > div {
+  margin: 0px auto;
+}
+
+.item {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.title {
+  margin-bottom: 20px
+}
+
+.image {
+  object-fit: cover;
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.navigation {
+  font-size: 1.2em;
+}
+
+.title {
+  font-size: 2em;
+}

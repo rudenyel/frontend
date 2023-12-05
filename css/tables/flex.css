@@ -1,52 +1,42 @@
-/* Homework 4 */
-
 .tab__data {
   font-size: 18px;
   border: 2px solid black;
-  /* background: yellow;
-  outline: 2px red solid; */
 }
 
-
 /* Block elements that include only inline-blocks */
-
+/* (the dimensions are determined by the content) */
 .tab__first,
 .tab__second,
 .tab__last,
 .tab__last > div:last-child > div:last-child {
-  font-size: 0;
+  display: flex;
 }
 
-
-/* Inlin5e-blocks */
-
-.tab__first > div,
+/* All inline-blocks */
+/* .tab__first > div,
 .tab__second > div,
 .tab__last > div,
 .tab__last > div:last-child > div:last-child > div {
-  display: inline-block;
-  vertical-align: top;
-}
+  float: left;
+} */
 
-
-/* Final inline-blocks (height & width) */
+/* Final inline-blocks with data */
+/* (width and height must be set)   */
 /* Nodes 1, 2, 3 */
 .tab__first > div,
-/* Nodes 6-7-8 */
-.tab__second > div:last-child,
 /* Node 9 */
 .tab__last > div:first-child {
   height: 240px;
   width: 240px;
 }
-
 /* Node 11 */
 .tab__last > div:last-child > div:last-child > div:first-child {
   width: 240px;
   height: 120px;
 }
 
-/* Inline-blocks widths (height is determined by the child) */
+/* Inline-blocks that include block elements */
+/* (width must be set, height is determined by the childs) */
 /* Nodes 4-5 */
 .tab__second > div:first-child {
   width: 480px;
@@ -57,7 +47,8 @@
   width: 240px;
 }
 
-/* Final display:blocks heights (width is determined by the parent)*/
+/* Final block element with data */
+/* (height must be set, width is determined by the parent) */
 /* Nodes 4, 5, 10 */
 .tab__second > div:first-child > div, 
 .tab__last > div:last-child > div:first-child {
@@ -71,9 +62,3 @@
 .tab__last > div:last-child > div:last-child > div:last-child > div {
   height: 60px;
 }
-
-
-
-
-
-

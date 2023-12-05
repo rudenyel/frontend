@@ -1,0 +1,65 @@
+.tab__data {
+  font-size: 18px;
+  border: 2px solid black;
+}
+
+/* Block elements that include only inline blocks */
+/* (the dimensions are determined by the content) */
+.tab__first,
+.tab__second,
+.tab__last,
+.tab__last > div:last-child > div:last-child {
+  font-size: 0;
+}
+
+/* All inline blocks */
+.tab__first > div,
+.tab__second > div,
+.tab__last > div,
+.tab__last > div:last-child > div:last-child > div {
+  display: inline-block;
+}
+
+/* Final inline blocks with data */
+/* (width and height must be set)   */
+/* Nodes 1, 2, 3 */
+.tab__first > div,
+/* Node 9 */
+.tab__last > div:first-child {
+  height: 240px;
+  width: 240px;
+}
+/* Node 11 */
+.tab__last > div:last-child > div:last-child > div:first-child {
+  width: 240px;
+  height: 120px;
+}
+
+/* Inline blocks that include block elements */
+/* (width must be set, height is determined by the childs) */
+/* Nodes 4-5 */
+.tab__second > div:first-child {
+  width: 480px;
+}
+/* Nodes 6-7-8, 12-13 */
+.tab__second > div:last-child,
+.tab__last > div:last-child > div:last-child > div:last-child {
+  width: 240px;
+}
+
+/* Final block element with data */
+/* (height must be set, width is determined by the parent) */
+/* Nodes 4, 5, 10 */
+.tab__second > div:first-child > div, 
+.tab__last > div:last-child > div:first-child {
+  height: 120px;
+}
+/* Nodes 6, 7, 8 */
+.tab__second > div:last-child > div {
+  height: 80px;
+}
+/* Nodes 12, 13 */
+.tab__last > div:last-child > div:last-child > div:last-child > div {
+  height: 60px;
+}
+
