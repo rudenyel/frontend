@@ -9,9 +9,9 @@
 .tab__second::after,
 .tab__last::after,
 .tab__last > div:last-child > div:last-child::after {
-  content: '';
-	clear: both;
-	display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 
 /* All float blocks */
@@ -25,12 +25,13 @@
 /* Final float blocks with data */
 /* (width and height must be set)   */
 /* Nodes 1, 2, 3 */
-.tab__first > div,
+.tab__first>div,
 /* Node 9 */
-.tab__last > div:first-child {
+.tab__last>div:first-child {
   height: 240px;
   width: 240px;
 }
+
 /* Node 11 */
 .tab__last > div:last-child > div:last-child > div:first-child {
   width: 240px;
@@ -43,6 +44,7 @@
 .tab__second > div:first-child {
   width: 480px;
 }
+
 /* Nodes 6-7-8, 12-13 */
 .tab__second > div:last-child,
 .tab__last > div:last-child > div:last-child > div:last-child {
@@ -52,14 +54,16 @@
 /* Final block element with data */
 /* (height must be set, width is determined by the parent) */
 /* Nodes 4, 5, 10 */
-.tab__second > div:first-child > div, 
+.tab__second > div:first-child > div,
 .tab__last > div:last-child > div:first-child {
   height: 120px;
 }
+
 /* Nodes 6, 7, 8 */
 .tab__second > div:last-child > div {
   height: 80px;
 }
+
 /* Nodes 12, 13 */
 .tab__last > div:last-child > div:last-child > div:last-child > div {
   height: 60px;
