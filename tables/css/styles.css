@@ -1,29 +1,46 @@
+@import url("reset.css");
+
+.container {
+  width: 720px;
+}
+
+.container, .item, .item > div {
+  margin: 0px auto;
+}
+
+.item {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.title {
+  margin-bottom: 20px
+}
+
+.image {
+  object-fit: cover;
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.navigation {
+  font-size: 1.2em;
+}
+
+.title {
+  font-size: 2em;
+}
+
 .tab__data {
   font-size: 18px;
   border: 2px solid black;
 }
 
-/* Block elements that include only float blocks */
-/* (the dimensions are determined by the content) */
-.tab__first::after,
-.tab__second::after,
-.tab__last::after,
-.tab__last > div:last-child > div:last-child::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-/* All float blocks */
-.tab__first > div,
-.tab__second > div,
-.tab__last > div,
-.tab__last > div:last-child > div:last-child > div {
-  float: left;
-}
-
-/* Final float blocks with data */
-/* (width and height must be set)   */
+/* Final blocks with data (width and height must be set) */
 /* Nodes 1, 2, 3 */
 .tab__first>div,
 /* Node 9 */
@@ -31,20 +48,18 @@
   height: 240px;
   width: 240px;
 }
-
 /* Node 11 */
 .tab__last > div:last-child > div:last-child > div:first-child {
   width: 240px;
   height: 120px;
 }
 
-/* Float blocks that include block elements */
+/* Blocks that include another block elements */
 /* (width must be set, height is determined by the childs) */
 /* Nodes 4-5 */
 .tab__second > div:first-child {
   width: 480px;
 }
-
 /* Nodes 6-7-8, 12-13 */
 .tab__second > div:last-child,
 .tab__last > div:last-child > div:last-child > div:last-child {
