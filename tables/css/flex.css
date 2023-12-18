@@ -1,8 +1,0 @@
-/* Block elements that include only flex blocks */
-/* (the dimensions are determined by the content) */
-.tab__first,
-.tab__second,
-.tab__last,
-.tab__last > div:last-child > div:last-child {
-  display: flex;
-}

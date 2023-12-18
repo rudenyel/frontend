@@ -2,33 +2,59 @@
 <html lang="zxx">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:wght@400;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Position</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <title>Gallery</title>
 </head>
 
 <body>
 
-  <nav>
-    <ul class="menu">
-      <li><a href="#ideapad">IdeaPad</a></li>
-      <li><a href="#ideapad_gaming">IdeaPad Gaming</a></li>
-      <li><a href="#ideapad_flex">IdeaPad Flex</a></li>
-      <li><a href="#ideapad_slim">IdeaPad Slim</a></li>
-      <li><a href="#legion">Legion</a></li>
-      <li><a href="#thinkbook">ThinkBook</a></li>
-      <li><a href="#thinkpad">ThinkPad</a></li>
-      <li><a href="#yoga">Yoga</a></li>
-    </ul>
-  </nav>
+  <header class="header">
+    <div class="container">
+      <a class="header-logo" href="#"><img src="../images/logo.svg" alt="Wisdom Page" width="182" height="40" /></a>
+      <ul class="top-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#feature">Feature</a></li>
+        <li><a class="icon-gallery" href="gallery.html">Gallery</a></li>
+        <li>
+          <a class="icon-arrow-down" href="#">In Design</a>
+          <ul class="top-list-level2">
+            <li><a href="#">In Design 1</a></li>
+            <li><a href="#">In Design 2</a></li>
+            <li>
+              <a class="icon-arrow-left" href="#">Block patterns</a>
+              <ul class="top-list-level3">
+                <li><a href="table.html">Tables</a></li>
+                <li><a href="inline.html">Inline blocks</a></li>
+                <li><a href="float.html">Float blocks</a></li>
+                <li><a href="flex.html">Flex blocks</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../index.html#contacts">Contacts</a></li>
+      </ul>
+    </div>
+  </header>
 
   <main>
+
+    <aside>
+      <ul class="side-list">
+        <li><a href="#ideapad">IdeaPad</a></li>
+        <li><a href="#ideapad_gaming">IdeaPad Gaming</a></li>
+        <li><a href="#ideapad_flex">IdeaPad Flex</a></li>
+        <li><a href="#ideapad_slim">IdeaPad Slim</a></li>
+        <li><a href="#legion">Legion</a></li>
+        <li><a href="#thinkbook">ThinkBook</a></li>
+        <li><a href="#thinkpad">ThinkPad</a></li>
+        <li><a href="#yoga">Yoga</a></li>
+      </ul>
+    </aside>
+
     <section class="gallery">
       <div class="container">
 
@@ -37,8 +63,9 @@
           <div class="item-box">
             <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
               those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
-              style, and fun, each Ideapad delivers responsive performance you can count on.</p>
-            <img src="images/lenovo.jpg" alt="Lenovo IdeaPad" width="550" height="300">
+              style, and fun, each Ideapad delivers responsive performance you can count on. Everyday laptops for
+              first-time users. High-performance laptops for serious gamers.</p>
+            <img src="../images/about.jpg" alt="Lenovo IdeaPad" width="550" height="300">
           </div>
         </div>
 
@@ -48,7 +75,7 @@
             <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
               those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
               style, and fun, each Ideapad delivers responsive performance you can count on.</p>
-            <img src="images/lenovo.jpg" alt="Lenovo IdeaPad Gaming" width="550" height="300">
+            <img src="../images/about.jpg" alt="Lenovo IdeaPad Gaming" width="550" height="300">
           </div>
         </div>
 
@@ -58,7 +85,7 @@
             <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
               those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
               style, and fun, each Ideapad delivers responsive performance you can count on.</p>
-            <img src="images/lenovo.jpg" alt="Lenovo IdeaPad Flex" width="550" height="300">
+            <img src="../images/about.jpg" alt="Lenovo IdeaPad Flex" width="550" height="300">
           </div>
         </div>
 
@@ -68,7 +95,7 @@
             <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
               those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
               style, and fun, each Ideapad delivers responsive performance you can count on.</p>
-            <img src="images/lenovo.jpg" alt="Lenovo IdeaPad Slim" width="550" height="300">
+            <img src="../images/about.jpg" alt="Lenovo IdeaPad Slim" width="550" height="300">
           </div>
         </div>
 
@@ -78,15 +105,17 @@
             <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
               those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
               style, and fun, each Ideapad delivers responsive performance you can count on.</p>
-            <img src="images/lenovo.jpg" alt="Lenovo Legion" width="550" height="300">
+            <img src="../images/about.jpg" alt="Lenovo Legion" width="550" height="300">
           </div>
         </div>
 
         <div class="item" id="thinkbook">
           <h2 class="item-title">Lenovo ThinkBook</h2>
           <div class="item-box">
-            <p>Lenovo Yoga Pro 7 14APH8</p>
-            <img src="images/lenovo.jpg" alt="Lenovo ThinkBook" width="550" height="300">
+            <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
+              those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
+              style, and fun, each Ideapad delivers responsive performance you can count on.</p>
+            <img src="../images/about.jpg" alt="Lenovo ThinkBook" width="550" height="300">
           </div>
         </div>
 
@@ -96,7 +125,7 @@
             <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
               those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
               style, and fun, each Ideapad delivers responsive performance you can count on.</p>
-            <img src="images/lenovo.jpg" alt="Lenovo ThinkPad" width="550" height="300">
+            <img src="../images/about.jpg" alt="Lenovo ThinkPad" width="550" height="300">
           </div>
         </div>
 
@@ -106,13 +135,27 @@
             <p>Everyday laptops for first-time users. High-performance laptops for serious gamers. Convertible PCs for
               those who like their entertainment on the go. There's an Ideapad for everyone. Embracing form, function,
               style, and fun, each Ideapad delivers responsive performance you can count on.</p>
-            <img src="images/lenovo.jpg" alt="Lenovo Yoga" width="550" height="300">
+            <img src="../images/about.jpg" alt="Lenovo Yoga" width="550" height="300">
           </div>
         </div>
 
       </div>
     </section>
+
+
   </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <p class="footer-page">© 2023 <a href="#">Wisdom page</a></p>
+      <ul class="footer-list">
+        <li><a class="icon-twitter" href="#"></a></li>
+        <li><a class="icon-linked-in" href="#"></a></li>
+        <li><a class="icon-instagram" href="#"></a></li>
+      </ul>
+    </div>
+  </footer>
+
 </body>
 
 </html>

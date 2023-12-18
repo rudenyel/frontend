@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Float blocks</title>
+  </head>
+
+  <body>
+    
+    <header class="header">
+      <div class="container">
+        <a class="header-logo" href="#"><img src="../images/logo.svg" alt="Wisdom Page" width="182" height="40" /></a>
+        <ul class="top-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#feature">Feature</a></li>
+          <li><a class="icon-gallery" href="gallery.html">Gallery</a></li>
+          <li>
+            <a class="icon-arrow-down" href="#">In Design</a>
+            <ul class="top-list-level2">
+              <li><a href="#">In Design 1</a></li>
+              <li><a href="#">In Design 2</a></li>
+              <li>
+                <a class="icon-arrow-left" href="#">Block patterns</a>
+                <ul class="top-list-level3">
+                  <li><a href="table.html">Tables</a></li>
+                  <li><a href="inline.html">Inline blocks</a></li>
+                  <li><a href="float.html">Float blocks</a></li>
+                  <li><a href="flex.html">Flex blocks</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="../index.html#contacts">Contacts</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      
+      <section class="blocks-demo">
+        <div class="container">
+          <h2 class="blocks-title subtitle">Float blocks</h2>
+
+          <div class="float-items">
+            <div class="w-240 h-240 content">1</div>
+            <div class="w-240 h-240 content">2</div>
+            <div class="w-240 h-240 content">3</div>
+          </div>
+
+          <div class="float-items">
+            <div class="w-480">
+              <div class="h-120 content">4</div>
+              <div class="h-120 content">5</div>
+            </div>
+            <div class="w-240">
+              <div class="h-80 content">6</div>
+              <div class="h-80 content">7</div>
+              <div class="h-80 content">8</div>
+            </div>
+          </div>
+
+          <div class="float-items">
+            <div class="w-240 h-240 content">9</div>
+            <div>
+              <div class="h-120 content">10</div>
+              <div class="float-items">
+                <div class="w-240 h-120 content">11</div>
+                <div class="w-240">
+                  <div class="h-60 content">12</div>
+                  <div class="h-60 content">13</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <p class="footer-page">© 2023 <a href="#">Wisdom page</a></p>
+        <ul class="footer-list">
+          <li><a class="icon-twitter" href="#"></a></li>
+          <li><a class="icon-linked-in" href="#"></a></li>
+          <li><a class="icon-instagram" href="#"></a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+</html>
