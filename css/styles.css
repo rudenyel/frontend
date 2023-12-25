@@ -85,10 +85,15 @@ body {
   font-weight: 400;
 }
 
+main {
+  transition: all 0.2 linear; /* ???? */
+}
+
 aside {
   position: fixed;
-  z-index: 10;
-  width: calc(50vw - 275px);  /* half width menu container*/
+  z-index: 5;
+  /* half width container and sidebar*/
+  width: calc(50vw - 275px - 50px);
   top: 0;
   bottom: 0;
   padding: 10px;
@@ -98,7 +103,86 @@ aside {
   flex-direction: column;
   justify-content: center;
 
+  background: #323232;
+  transition: all 0.2 linear; /* ???? */
+}
+
+.sidebar {
+  position: fixed;
+  width: 100px;
   background: #212121;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: .2s linear;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar:hover {
+  width: 300px;
+}
+
+.wrapper {
+  padding-left: 100px;
+  transition: .2s linear;
+}
+
+.sidebar:hover + .wrapper {
+  padding-left: 300px;
+}
+
+.sidebar:hover + .wrapper aside {
+  width: calc(50vw - 275px - 150px);
+}
+
+.sidebar-link {
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 25px;
+  font-size: 20px;
+
+  color: inherit;
+  text-decoration: none;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.sidebar-link svg {
+  width: 40px;
+  height: 40px;
+  fill: #A6A6A6;
+  transform: rotate(45deg);
+  transition: 0.2 linear;
+}
+
+.sidebar-link span {
+  display: inline-block;
+  border: 3px solid #A6A6A6;
+  border-radius: 10px;
+  padding: 5px;
+  transform: rotate(-45deg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sidebar-link:hover {
+  background:#424242;
+  color: #FF7E20;;
+}
+
+.sidebar-link:hover svg {
+  transform: rotate(45deg) scale(1.4);
+  fill: white;
+}
+
+.sidebar-link:hover span {
+  border: 3px solid white;
 }
 
 .container {
@@ -240,11 +324,6 @@ a.icon-right > svg {
 
 .header-list li a:hover {
   background-color: #848484;
-  color: yellow;
-}
-
-.header-list li a:hover > svg {
-  fill: yellow;
 }
 
 /* *Tagline section */
@@ -351,7 +430,7 @@ a.icon-right > svg {
 
 .feature-card-link {
   margin-top: auto;
-  color: #FF7E20
+  color: #FF7E20;
 }
 
 /* *Footer */
@@ -478,8 +557,10 @@ td {
 .side-list {
   display: flex;
   flex-direction: column;
+  align-items: end;
   flex-wrap: wrap;
   gap: 20px;
+  transition: all 0.2 linear; /* ???? */
 }
 
 .side-list a {
@@ -489,7 +570,7 @@ td {
 }
 
 .side-list a:hover {
-  color: lightsalmon;
+  color: #FF7E20;
 }
 
 /* *Gallery */
@@ -542,4 +623,25 @@ td {
   width: 100%;
   min-height: 100%;
   object-fit: cover;
+}
+
+/* Logo animation */
+
+g.logo_orange {
+  fill: #FF7E20;
+}
+
+g.logo_black {
+  fill: black;
+}
+
+.logo {  
+  fill-opacity: 0;
+  animation: fade-in linear 5s forwards;
+}
+
+@keyframes fade-in {
+  to {
+    fill-opacity: 1;
+  }
 }
