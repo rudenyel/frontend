@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Sign-in</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <section class="auth">
+
+        <div class="auth__switch">
+          <input type="checkbox" id="switch">
+          <label for="switch">
+            <span>Sign in</span>
+            <span>Sign up</span>
+          </label>
+        </div>
+
+        <form class="auth__form" name="login-form" method="get">
+          <h1 class="auth__title">Sign-in</h1>
+          <input class="auth__input" type="email" name="email" placeholder="Enter e-mail">
+          <input class="auth__input" type="password" name="password" placeholder="Enter password">
+          <div class="auth__checkbox_group">
+            <div class="auth__checkbox">
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember me</label>
+            </div>
+            <p><a href="#">Forgot password?</a></p>
+          </div>
+          <input class="auth__input" type="submit" value="Sign in">
+        </form>
+
+        <div class="auth__signup">
+          <p>You don't have an account?</p>
+          <p><a href="#">Sign up</a></p>
+        </div>
+
+        <div class="auth__footer">
+          <p>Or log in via social media</p>
+          <ul>
+            <li><a href="#"><svg>
+                  <use href="images/icons/sprite.svg#twitter"></use>
+                </svg></a></li>
+            <li><a href="#"><svg>
+                  <use href="images/icons/sprite.svg#linked-in"></use>
+                </svg></a></li>
+            <li><a href="#"><svg>
+                  <use href="images/icons/sprite.svg#instagram"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        </div>
+
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

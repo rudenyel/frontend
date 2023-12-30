@@ -214,12 +214,13 @@ aside {
 
 .header > .container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
-.header-logo {
+/* .header-logo {
   margin-right: auto;
-}
+} */
 
 /* *Header menu */
 
@@ -644,4 +645,145 @@ g.logo_black {
   to {
     fill-opacity: 1;
   }
+}
+
+/* *Forms */
+.form {
+  /* max-width: 400px; */
+  padding: 50px 0;
+  background: #ccc;
+}
+
+input::placeholder {
+  color: red;
+}
+
+.form input {
+  /* width: 100%; */
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 600px;
+  height: 250px;
+  max-width: 1000px;
+  min-height: 200px;
+  resize: vertical;
+  background: yellow;
+}
+
+textarea:focus {
+  background: orange;
+}
+
+textarea:hover {
+  background: red;
+}
+
+.switch__inner {
+  margin-bottom: 20px;
+}
+
+.switch__inner input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.switch__inner input + label {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  background: #253f97;
+  cursor: pointer;
+  box-shadow: inset 0 0 4px black;
+  position: relative;
+}
+
+.switch__inner input + label::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: blue;
+  transition: .3s linear;
+}
+
+.switch__inner input:checked + label::before {
+  left: calc(50% + 5px)
+}
+
+/* *Checkbox */
+.checkbox-group input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox-group input + label {
+  display: inline-block;
+  padding: 5px 5px 5px 20px;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-group input + label::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+.checkbox-group input:checked + label::before {
+  background: #253f97;
+  border-color: #253f97;
+}
+
+.checkbox-group input:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 6px;
+  height: 12px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(38deg);
+}
+
+/* Disabled */
+.checkbox-group input:disabled + label {
+  cursor: default;
+}
+
+.checkbox-group input:disabled + label::before {
+  background-color: #848484;
+  border-color: #848484;
+}
+
+/* Active */
+
+.checkbox-group input:not(:disabled):active + label::before {
+  background-color: yellow;
+  border-color: yellow;
+}
+
+/* Focus */
+
+.checkbox-group input:focus:checked + label::before {
+  background-color: yellow;
+  border-color: yellow;
+}
+
+.checkbox-group input:focus:not(:checked) + label::before {
+  border-color: yellow;
 }
