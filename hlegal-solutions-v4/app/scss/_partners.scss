@@ -1,0 +1,16 @@
+.partners {
+
+    &__container {
+    }
+
+    &_list {
+        :nth-child(1) {
+            background: #1C4280 url("../images/logo-partner1.png") no-repeat; 
+        }
+    }
+
+    &__item {
+        height: 120px;
+         
+    }
+}

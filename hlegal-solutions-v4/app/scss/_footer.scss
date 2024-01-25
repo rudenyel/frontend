@@ -1,0 +1,108 @@
+.footer {
+    background-color: $bg-color;
+    padding: 30px 0px;
+
+    a {
+        display: block;
+
+        @include viewport-md {
+            white-space: nowrap;
+        }
+    }
+
+    p {
+        text-align: center;
+        
+        @include viewport-md {
+            white-space: nowrap;
+        }
+    }
+
+    &__container {
+        @include flex-column-center;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+        @include viewport-md {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+
+    &__separator {
+        border-top: 2px solid $separator-color;
+        height: 10px;
+        width: 100%;
+    }
+
+    &__location {
+        @include flex-column-center;
+        gap: 10px;
+
+        @include viewport-md {
+            flex-direction: row;
+            margin-right: auto;
+        }
+    }
+
+    &__contacts {
+        @include flex-column-center;
+        gap: 10px;
+
+        @include viewport-md {
+            flex-direction: row;
+            order: 1;
+            flex-basis: 100%;
+        }
+        
+    }
+
+    // LOCATION
+
+    &__address {
+        color: $main-color;
+    }
+
+    &__map {
+        @include base-link;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    // CONTACTS
+
+    &__facebook {
+        line-height: 10px;
+
+        svg {
+            width: 38px;
+            height: 38px;
+            fill: $regular-color;
+            transition: .2s linear;
+        }
+
+        svg:hover {
+            fill: $accent-color;
+        }
+    }
+
+    &__phone {        
+        @include base-link($alt-color);
+    }
+
+    &__email {
+        @include base-link;
+    }
+
+    // LEGAL
+    &__copyright {
+        padding-top: 10px;
+        color: $text-color;
+        font-size: 16px;
+
+        @include viewport-md {
+            padding-top: 0px;
+        }
+    }
+}

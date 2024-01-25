@@ -1,0 +1,54 @@
+body {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.wrapper {
+	background: $gradient-supersoft;
+}
+
+.container {
+	// від 0 до бескінечності
+	padding: 0 30px;
+
+	@include viewport-md {
+		max-width: 708px;
+		margin: 0 auto;
+	}
+	@include viewport-lg {
+		max-width: 964px;
+	}
+	@include viewport-xl {
+		max-width: 1380px;
+	}
+	@include viewport-xxl {
+		max-width: 1660px;
+	}
+}
+
+.dotted {
+	display: none;
+	@include viewport-md {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		border-radius: $radius-rounded;
+		background: $separator-color;
+
+		&--gray {
+			background: $text-color;
+		}
+	}
+}
+
+// RANDOM NEED TO DELETE
+.random {
+	padding: 100px 0;
+}
+.random-btn {
+	background: $alt-color;
+	color: $basic-white;
+	padding: 14px 30px;
+	cursor: pointer;
+}
