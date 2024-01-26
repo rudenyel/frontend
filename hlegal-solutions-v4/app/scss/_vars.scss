@@ -97,3 +97,26 @@ $breakpoint-xxl: 1920px;
 		border-color: $hover-color;
 	}
 }
+
+@mixin base-link-arrow($color: $regular-color, $hover-color: $accent-color) {
+	@include base-link($color, $hover-color);
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	position: relative;
+	padding-right: 8px;
+	margin: 0 0 5px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		right: 0;
+		width: 6px;
+		height: 6px;
+		border-bottom: 2px solid $regular-color;
+		border-right: 2px solid $regular-color;
+		transform: rotate(-45deg);
+		transition: .2s;
+	}
+}

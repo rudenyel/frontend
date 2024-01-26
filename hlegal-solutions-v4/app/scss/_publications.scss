@@ -1,0 +1,120 @@
+.publications {
+    background-color: $bg-color;
+    padding-top: 30px;
+
+    &__container {
+        background-color: $bg-color;
+    }
+
+    &__head {
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        @include viewport-md {
+            flex-direction: row;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+    }
+
+    article {
+        @include viewport-md {
+            &:nth-child(1) {
+                flex: 1 1 45%;
+            }
+            &:nth-child(2) {
+                flex: 1 1 45%;
+            }
+            &:nth-child(3) {
+                flex: 1 1 100%;
+            }
+        }
+
+        @include viewport-lg {
+            
+            &:nth-child(1) {
+                flex: 1 1 30%;
+            }
+            &:nth-child(2) {
+                flex: 1 1 30%;
+            }
+            &:nth-child(3) {
+                flex: 1 1 30%;
+            }
+        }
+
+
+    }
+
+    // HEAD
+    
+    &__link {
+        @include base-link-arrow;
+    }
+
+    &__tagline {
+        @include subtitle;
+		@include main-gradient-text;
+        line-height: 38px;
+        margin-top: 5px;
+    }
+
+    // BOX
+
+    &__item {
+        background-color: $basic-white;
+        border-radius: $radius-sm $radius-sm 0px 0px;
+        overflow: hidden;
+    }
+    
+    // ITEM
+
+    &__image {
+        display: block;
+        line-height: 10px;
+
+        img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        padding: 30px;
+    }
+
+    // CONTENT
+
+    &__title {
+        @include base-link;
+    }
+
+    &__date {
+        color: $text-color;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__separator {
+        border-top: 4px solid $separator-color;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 14px;;
+    }
+}

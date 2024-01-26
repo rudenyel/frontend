@@ -1,16 +1,92 @@
 .partners {
-
-    &__container {
+    margin-top: 60px;
+    
+    @include viewport-xxl {
+        margin-bottom: 60px;
     }
 
-    &_list {
-        :nth-child(1) {
-            background: #1C4280 url("../images/logo-partner1.png") no-repeat; 
+    h1 {
+        text-align: center;
+        color: $main-color;
+        font-size: 14px;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+    }
+
+    &__container {
+        @include viewport-xxl {
+            padding: 0px 100px;
+        }
+    }
+
+    &_box {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include viewport-xxl {
+            border-radius: $radius-md;
+            overflow: hidden;
         }
     }
 
     &__item {
         height: 120px;
-         
+        flex: 1 1 100%;
+
+        @include viewport-md {
+            flex: 1 1 33%;
+        }
+
+        @include viewport-lg {
+            flex: 1 1 25%;
+        }
+    }
+
+    &__item:nth-child(1) {
+        background: #1C4280 url("../images/logo-partner1.png") no-repeat center; 
+    }
+    &__item:nth-child(2) {
+        background: #143646 url("../images/logo-partner2.png") no-repeat center; 
+    }
+    &__item:nth-child(3) {
+        background: #F48B30 url("../images/logo-partner3.png") no-repeat center; 
+    }
+    &__item:nth-child(4) {
+        background: #9E4DC3 url("../images/logo-partner4.png") no-repeat center; 
+    }
+    &__item:nth-child(5) {
+        background: #FD9339 url("../images/logo-partner5.png") no-repeat center; 
+    }
+    &__item:nth-child(6) {
+        background: #E2E2E4 url("../images/logo-partner6.png") no-repeat center; 
+    }
+    &__item:nth-child(7) {
+        background: #C71C36 url("../images/logo-partner7.png") no-repeat center; 
+    }
+    &__item:nth-child(8) {
+        background: #DCF3F9 url("../images/logo-partner8.png") no-repeat center; 
+    }
+    &__item:nth-child(9) {
+        background: #EAEAEA url("../images/logo-partner9.png") no-repeat center; 
+    }
+    &__item:nth-child(10) {
+        background: #282240 url("../images/logo-partner10.png") no-repeat center; 
+    }
+    &__item:nth-child(11) {
+        background: #1D4568 url("../images/logo-partner11.png") no-repeat center; 
+    }
+    &__item:nth-child(12) {
+        background: #000 url("../images/logo-partner12.png") no-repeat center; 
+    }
+
+    &__item:nth-child(n+7) {
+        display: none;
+        
+        @include viewport-md {
+            display: block;
+        }
     }
 }

@@ -1,0 +1,21 @@
+.cards {
+	padding: 100px 0;
+	background: #808080;
+
+	&__container {
+		display: grid;
+		gap: 30px;
+
+		@include viewport-md {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include viewport-lg {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__item {
+		padding: 20px;
+		background: pink;
+	}
+}
