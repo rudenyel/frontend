@@ -1,4 +1,4 @@
-.publications {
+.pubs {
     background-color: $bg-color;
     padding-top: 30px;
 
@@ -11,9 +11,7 @@
     }
 
     &__box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column-center;
         gap: 30px;
 
         @include viewport-md {
@@ -23,45 +21,17 @@
         }
     }
 
-    article {
-        @include viewport-md {
-            &:nth-child(1) {
-                flex: 1 1 45%;
-            }
-            &:nth-child(2) {
-                flex: 1 1 45%;
-            }
-            &:nth-child(3) {
-                flex: 1 1 100%;
-            }
-        }
-
-        @include viewport-lg {
-            
-            &:nth-child(1) {
-                flex: 1 1 30%;
-            }
-            &:nth-child(2) {
-                flex: 1 1 30%;
-            }
-            &:nth-child(3) {
-                flex: 1 1 30%;
-            }
-        }
-
-
-    }
-
     // HEAD
     
     &__link {
         @include base-link-arrow;
     }
 
-    &__tagline {
+    &__title {
         @include subtitle;
 		@include main-gradient-text;
-        line-height: 38px;
+        font-size: 38px;
+        line-height: 48px;
         margin-top: 5px;
     }
 
@@ -71,6 +41,34 @@
         background-color: $basic-white;
         border-radius: $radius-sm $radius-sm 0px 0px;
         overflow: hidden;
+    }
+
+    &__item:nth-child(1) {
+        @include viewport-md {
+            flex: 1 1 45%;
+        }
+        @include viewport-lg {
+            flex: 1 1 30%;
+        }
+    }
+
+    &__item:nth-child(2) {
+        @include viewport-md {
+            flex: 1 1 45%;
+        }
+        @include viewport-lg {
+            flex: 1 1 30%;
+        }
+    }
+
+    &__item:nth-child(3) {
+        @include viewport-md {
+            flex: 1 1 100%;
+        }
+        @include viewport-lg {
+            flex: 1 1 30%;
+        }
+        
     }
     
     // ITEM
@@ -97,7 +95,7 @@
 
     // CONTENT
 
-    &__title {
+    &__subtitle {
         @include base-link;
     }
 

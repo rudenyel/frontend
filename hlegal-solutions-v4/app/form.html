@@ -1,58 +1,23 @@
-(() => {
-	const burgerOpen = document.querySelector('.header__box-burger')
-	const burgerClose = document.querySelector('.header__nav-close')
-	const navigationMenu = document.querySelector('.header__nav')
+<!DOCTYPE html>
+<html lang="en">
 
-	burgerOpen.addEventListener('click', () => {
-		navigationMenu.classList.add('active')
-	})
-	burgerClose.addEventListener('click', () => {
-		navigationMenu.classList.remove('active')
-	})
-})();
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="you legal solutions provider">
+	<title>Title</title>
+	<!-- <link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+	/> -->
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
 
-(() => {
-	const tabsitem = document.querySelectorAll('.tabs__links-item')
-	const tabsBlocks = document.querySelectorAll('.tabs__content-item')
-	
-	tabsitem.forEach((tab, index) => {
-		tab.addEventListener('click', () => {
+<style>
 
-			tabsBlocks.forEach((content) => {
-				content.classList.remove('active')
-			})
-			tabsitem.forEach((content) => {
-				content.classList.remove('active')
-			})
-			tabsitem[index].classList.add('active')
-			tabsBlocks[index].classList.add('active')
-		})
-	})
-})();
-
-(() => {
-	const swiper = new Swiper('.swiper', {
-		loop: true,
-		spaceBetween: 25,
-		speed: 400,
-		grabCursor: true,
-
-		// effect: 'fade',
-		// fadeEffect: {
-		// 	crossFade: true
-		// },
-
-		pagination: {
-			el: '.swiper-pagination',
-		}
-	});
-})();
-
-const formPopup = new Popup({
-	id: "contact-form",
-	title: "We would like to help you",
-	content: `<form class="contact-form"><input class="contact-form__input" type="text" name="name" placeholder="Name"><textarea class="contact-form__textarea" name="message" maxlength="340" placeholder="Message"></textarea><p class="contact-form__p">How to answer you?</p><input class="contact-form__input" type="text" name="phone" placeholder="Phone number"><input class="contact-form__input" type="text" name="email" placeholder="Email"><button class="contact-form__button">Send message</button></form>`,
-	css: `
+	body {
+		padding: 100px;
+	}
 
 	.popup {
         background-color: rgba(0,0,0,0) !important;
@@ -62,7 +27,7 @@ const formPopup = new Popup({
 		background-color: #F5F5FA !important;
 		box-shadow: 0px 15px 80px 0px rgba(40, 40, 86, 0.50) !important;
 		border-radius: 12px !important;
-		max-width: 650px !important;
+		width: 650px !important;
 		padding: 30px !important;
 	}
 
@@ -96,7 +61,7 @@ const formPopup = new Popup({
 
 		font-size: 32px !important;
 		text-align: center !important;
-		line-height: 28px !important;
+		line-height: 26px !important;
 		color: #EC6F5D !important;
 	}
 
@@ -183,12 +148,35 @@ const formPopup = new Popup({
 		background: #0085FF !important;
 	}
 
-	`,
-	disableScroll: false
-});
+</style>
 
-const contactBtn = document.querySelector('.contact-btn')
+<body>
 
-contactBtn.addEventListener('click', () => {
-	formPopup.show()
-})
+	<div class="popup-content">
+		<div class="popup-header">
+			<div class="popup-title">We would like to help you</div>
+			<div class="popup-close">x</div>
+		</div>
+		<div class="popup-body">
+			<form class="contact-form">
+			     <input class="contact-form__input" type="text" name="name" placeholder="Name">
+			     <textarea class="contact-form__textarea" name="message" maxlength="340" placeholder="Message"></textarea>
+			     <p class="contact-form__p">How to answer you?</p>
+			     <input class="contact-form__input" type="text" name="phone" placeholder="Phone number">
+			     <input class="contact-form__input" type="text" name="email" placeholder="Email">
+			     <button class="contact-form__button">Send message</button>
+		    </form>
+		</div>
+	</div>
+
+<!-- 
+<form class="contact-form"><input class="contact-form__input" type="text" name="name" placeholder="Name"><textarea class="contact-form__textarea" name="message" maxlength="340" placeholder="Message"></textarea><p class="contact-form__p">How to answer you?</p><input class="contact-form__input" type="text" name="phone" placeholder="Phone number"><input class="contact-form__input" type="text" name="email" placeholder="Email"><button class="contact-form__button">Send message</button></form>
+
+-->
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

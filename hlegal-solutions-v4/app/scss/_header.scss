@@ -97,6 +97,10 @@
 		padding: 5px 7px;
 		border-radius: $radius-sm;
 
+		&:hover {
+			background: rgba(255, 255, 255, 0.20);;
+		}
+
 		&.active {
 			background: $accent-color;
 		}
@@ -118,12 +122,26 @@
 
 	&__social {
 		display: none;
+
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: $basic-white;
+			transition: .2s linear;
+		}
+
+		svg:hover {
+			fill: $accent-color;
+		}
+
 		@include viewport-md {
 			display: block;
+			line-height: 10px;
 			color: $basic-white;
 			font-weight: 700;
 			font-size: 20px;
 		}
+
 	}
 
 	&__box {
@@ -151,15 +169,46 @@
 	}
 
 	&__box-logo {
+		display: flex;
+		gap: 4px;
+		text-decoration: none;
+
+		span {
+			display: block;
+			line-height: 10px;
+		}
 
 		img {
 			width: 69px;
 			height: 32px;
+			
 			@include viewport-md {
 				width: 130px;
 				height: 60px;
 			}
 		}
+
+		svg {
+			width: 12px;
+			height: 26px;
+			
+			@include viewport-md {
+				width: 21px;
+				height: 47px;
+			}
+		}
+	}
+
+	&__box-name {
+		color: $basic-white;
+		padding-top: 8px;
+		font-size: 20px;
+		
+		@include viewport-md {
+			padding-top: 18px;
+			font-size: 36px;
+		}
+		
 	}
 
 	&__box-burger {
@@ -167,6 +216,7 @@
 		height: 16px;
 		position: relative;
 		cursor: pointer;
+		
 		@include viewport-md {
 			display: none;
 		}
@@ -279,7 +329,13 @@
 			padding: 0;
 			background: transparent;
 			border-radius: 0;
+		} 
+
+		&.active {
+			border-color: $accent-color;
+			color: $accent-color;
 		}
+
 		&:hover {
 			border-color: $regular-color;
 		}

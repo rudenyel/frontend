@@ -43,6 +43,17 @@
             flex-direction: row;
             margin-right: auto;
         }
+
+        &-address {
+            color: $main-color;
+        }
+
+        &-map {
+            @include base-link;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }    
     }
 
     &__contacts {
@@ -54,48 +65,35 @@
             order: 1;
             flex-basis: 100%;
         }
+
+        &-social {
+            line-height: 10px;
+    
+            svg {
+                width: 38px;
+                height: 38px;
+                fill: $regular-color;
+                transition: .2s linear;
+            }
+    
+            svg:hover {
+                fill: $accent-color;
+            }
+        }
+
+        &-phone {   
+            color: $alt-color;
+		    font-weight: 700;
+		    text-decoration: none;     
+            // @include base-link($alt-color);
+        }
+
+        &-email {
+            @include base-link;
+        }
         
     }
 
-    // LOCATION
-
-    &__address {
-        color: $main-color;
-    }
-
-    &__map {
-        @include base-link;
-        font-size: 12px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    // CONTACTS
-
-    &__facebook {
-        line-height: 10px;
-
-        svg {
-            width: 38px;
-            height: 38px;
-            fill: $regular-color;
-            transition: .2s linear;
-        }
-
-        svg:hover {
-            fill: $accent-color;
-        }
-    }
-
-    &__phone {        
-        @include base-link($alt-color);
-    }
-
-    &__email {
-        @include base-link;
-    }
-
-    // LEGAL
     &__copyright {
         padding-top: 10px;
         color: $text-color;

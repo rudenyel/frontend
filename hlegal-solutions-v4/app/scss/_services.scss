@@ -1,0 +1,99 @@
+.services {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    
+    @include viewport-md {
+        padding-top: 60px;
+    }
+
+    &__container {
+    }
+
+    &__head {
+        margin-bottom: 30px;
+
+        @include viewport-md {
+            margin-bottom: 60px;
+        }
+    }
+
+    // HEAD
+
+    &__link {
+        @include base-link-arrow;
+    }
+
+
+    &__title {
+        @include subtitle;
+		@include main-gradient-text;
+        font-size: 38px;
+        margin-top: 10px;
+    }
+
+    &__box {
+        display: grid;
+		gap: 60px;
+
+		@include viewport-md {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include viewport-lg {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+    }
+
+    &__item {
+
+        a {
+            display: block;
+        }
+    }
+
+    // ITEM
+
+    &__icon {
+        width: 92px;
+        height: 92px;
+        background-color: $basic-white;
+        border-radius: $radius-lg;
+
+        margin-bottom: 30px;
+
+    }
+
+    &__item:nth-child(1) > &__icon {
+        background: $basic-white url("../images/icon-service1.svg") no-repeat center;
+    }
+
+    &__item:nth-child(2) > &__icon {
+        background: $basic-white url("../images/icon-service2.svg") no-repeat center;
+    }
+
+    &__item:nth-child(3) > &__icon {
+        background: $basic-white url("../images/icon-service3.svg") no-repeat center;
+    }
+
+    &__item:nth-child(4) > &__icon {
+        background: $basic-white url("../images/icon-service4.svg") no-repeat center;
+    }
+
+    &__item:nth-child(5) > &__icon {
+        background: $basic-white url("../images/icon-service5.svg") no-repeat center;
+    }
+
+    &__item:nth-child(6) > &__icon {
+        background: $basic-white url("../images/icon-service6.svg") no-repeat center;
+    }
+
+    &__subtitle {
+        @include base-link;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        color: $basic-white
+    }
+}

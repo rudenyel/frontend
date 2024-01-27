@@ -1,0 +1,105 @@
+.service {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+
+        @include viewport-xl {
+            padding: 0px 120px;
+        }
+    }
+
+    &__icon {
+        width: 92px;
+        height: 92px;
+        background-color: $basic-white;
+        border-radius: $radius-lg;
+        background: $basic-white url("../images/icon-service1.svg") no-repeat center
+    }
+
+    &__title {
+        @include subtitle;
+		@include main-gradient-text;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 19px;
+        color: $basic-white;
+        text-align: center;
+    }
+
+    &__button {
+    }
+}
+
+
+.service-list {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        @include viewport-xl {
+            padding: 0px 150px;
+        }
+    }
+
+    &__separator {
+        border-top: 4px solid rgba(255, 255, 255, 0.50);
+        width: 100%;
+    }
+
+    &__title {
+        color: $basic-white;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 60px;
+        
+        @include viewport-md {
+            flex-direction: row;
+            gap: 60px;
+        }
+    }
+
+    &__inner {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        
+        @include viewport-md {
+            flex: 1 1 45%;
+        }
+    }
+
+    &__item {
+        color: $basic-white;
+        font-size: 18px;
+        text-indent: -16px;
+        padding-left: 16px;
+
+        &::before { /* add the new bullet point */
+            display: inline-block;
+            content: '';
+            border-radius: $radius-rounded;
+            height: 8px;
+            width: 8px;
+            margin-right: 8px;
+            background-color: $accent-color;
+        }
+    }
+}
